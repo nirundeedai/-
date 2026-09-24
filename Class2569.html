@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Class Schedule</title>
+
+    <style>
+
+        body {
+            background-color: #b4e8c6;
+            font-family: "Tahoma", "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* หัวข้อ */
+        h1 {
+            width: 96%;
+            margin: 0 auto 10px auto;
+            padding: 10px 0;
+
+            text-align: center;
+
+            color: #316fe5;
+            font-size: 28px;
+
+            background: linear-gradient(
+                to right,
+                #b88bc8,
+                #91a7e8
+            );
+
+            border-radius: 12px;
+
+            box-shadow:
+                2px 2px 5px rgb(112, 112, 112);
+        }
+
+
+        /* ตาราง */
+        table {
+            width: 96%;
+            margin: auto;
+
+            border-collapse: collapse;
+
+            background-color: white;
+
+            box-shadow:
+                2px 2px 5px rgb(112, 112, 112);
+        }
+
+
+        /* หัวตาราง */
+        th {
+            height: 55px;
+
+            background-color: rgb(51, 51, 51);
+
+            color: rgb(209, 82, 82);
+
+            border: 1px solid rgb(112, 112, 112);
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* ช่องวัน */
+        .day {
+            width: 100px;
+
+            background-color: #f2f2f2;
+
+            color: #222;
+
+            text-align: center;
+
+            border: 1px solid rgb(112, 112, 112);
+        }
+
+
+        /* ช่องว่าง */
+        td {
+            height: 75px;
+
+            padding: 6px 2px;
+
+            text-align: center;
+
+            vertical-align: middle;
+
+            border: 1px solid rgb(112, 112, 112);
+
+            font-size: 14px;
+        }
+
+
+        /* วิชา */
+        .subject {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+
+        /* รายละเอียดวิชา */
+        .detail {
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+
+        /* วิชาสีเหลือง */
+        .yellow {
+            background: linear-gradient(
+                to right,
+                #e7eedb,
+                #e0e867
+            );
+        }
+
+
+        /* วิชาสีเขียว */
+        .green {
+            background: linear-gradient(
+                to right,
+                #e9e7ce,
+                #65e56f
+            );
+        }
+
+
+        /* วิชาสีน้ำเงิน */
+        .blue {
+            background: linear-gradient(
+                to right,
+                #d4eef1,
+                #5688d8
+            );
+        }
+
+
+        /* วิชาสีฟ้า */
+        .cyan {
+            background: linear-gradient(
+                to right,
+                #b8e5d1,
+                #57b8df
+            );
+        }
+
+
+        /* วิชาสีม่วง */
+        .purple {
+            background: linear-gradient(
+                to right,
+                #a6d6c5,
+                #a384d2
+            );
+        }
+
+
+        /* วิชา HR */
+        .pink {
+            background: linear-gradient(
+                to right,
+                #e5d1ad,
+                #e8a9c9
+            );
+        }
+
+
+        /* Footer */
+        .footer {
+            width: 96%;
+
+            margin: 28px auto 0 auto;
+
+            padding-top: 15px;
+
+            border-top: 1px solid white;
+
+            text-align: center;
+
+            color: #888;
+
+            font-size: 13px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- หัวข้อ -->
+    <!-- ========================= -->
+
+    <h1>
+        ตารางเรียน วิศวกรรมคอมพิวเตอร์ 1/2569
+    </h1>
+
+
+    <!-- ========================= -->
+    <!-- ตารางเรียน -->
+    <!-- ========================= -->
+
+    <table>
+
+        <!-- หัวตาราง -->
+
+        <tr>
+
+            <th>Day/Time</th>
+
+            <th>8.00-9.00</th>
+
+            <th>9.00-10.00</th>
+
+            <th>10.00-11.00</th>
+
+            <th>11.00-12.00</th>
+
+            <th>12.00-13.00</th>
+
+            <th>13.00-14.00</th>
+
+            <th>14.00-15.00</th>
+
+            <th>15.00-16.00</th>
+
+            <th>16.00-17.00</th>
+
+        </tr>
+
+
+        <!-- ========================= -->
+        <!-- วันจันทร์ -->
+        <!-- ========================= -->
+
+        <tr>
+
+            <td class="day">
+                จันทร์
+            </td>
+
+            <td></td>
+
+            <td></td>
+
+            <td colspan="2" class="yellow">
+
+                <div class="subject">
+                    GE2200108-64
+                </div>
+
+                (3)(34),<br>
+
+                <div class="detail">
+                    ห้อง (พน.) 1961 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+        </tr>
+
+
+        <!-- ========================= -->
+        <!-- วันอังคาร -->
+        <!-- ========================= -->
+
+        <tr>
+
+            <td class="day">
+                อังคาร
+            </td>
+
+            <td colspan="2" class="green">
+
+                <div class="subject">
+                    EN2041101-65
+                </div>
+
+                (3) 2,
+
+                <div class="detail">
+                    ห้อง (พน.) 1957 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+        </tr>
+
+
+        <!-- ========================= -->
+        <!-- วันพุธ -->
+        <!-- ========================= -->
+
+        <tr>
+
+            <td class="day">
+                พุธ
+            </td>
+
+
+            <td colspan="2" class="blue">
+
+                <div class="subject">
+                    GE2500101-64
+                </div>
+
+                (1) 23,
+
+                <div class="detail">
+                    ห้อง (พน.) โรงยิม ชั้น 3
+                    อาคารศึกษา<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+
+            <td class="purple">
+
+                <div class="subject">
+                    ST2051107-65
+                </div>
+
+                (3) 2,
+
+                <div class="detail">
+                    ห้อง (พน.) 1962 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+
+            <td class="pink">
+
+                <div class="subject">
+                    HR
+                </div>
+
+                (0) 310,
+
+                <div class="detail">
+                    ห้อง (พน.) 1954 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+        </tr>
+
+
+        <!-- ========================= -->
+        <!-- วันพฤหัสบดี -->
+        <!-- ========================= -->
+
+        <tr>
+
+            <td class="day">
+                พฤหัสบดี
+            </td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+            <td></td>
+
+
+            <td colspan="2" class="cyan">
+
+                <div class="subject">
+                    EN2044101-65
+                </div>
+
+                (1) 2,
+
+                <div class="detail">
+                    ห้อง (พน.) 1957 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+            <td></td>
+
+            <td></td>
+
+        </tr>
+
+
+        <!-- ========================= -->
+        <!-- วันศุกร์ -->
+        <!-- ========================= -->
+
+        <tr>
+
+            <td class="day">
+                ศุกร์
+            </td>
+
+            <td></td>
+
+
+            <td colspan="2" class="yellow">
+
+                <div class="subject">
+                    GE2300110-64
+                </div>
+
+                (3) 2,
+
+                <div class="detail">
+                    ห้อง (พน.) 1961 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+
+            <td></td>
+
+            <td></td>
+
+
+            <td colspan="2" class="green">
+
+                <div class="subject">
+                    EN2041102-65
+                </div>
+
+                (3) 2,
+
+                <div class="detail">
+                    ห้อง (พน.) 1962 ห้องเรียน<br>
+                    อาคาร15
+                </div>
+
+            </td>
+
+
+            <td></td>
+
+        </tr>
+
+    </table>
+
+
+    <!-- ========================= -->
+    <!-- Footer -->
+    <!-- ========================= -->
+
+    <div class="footer">
+
+        © สงวนลิขสิทธิ์ 2569 โดย 056950405240-2
+        นาย นิรันดร์ ดีได้
+        สาขาวิศวกรรมคอมพิวเตอร์
+        CPE-RMUTP
+
+    </div>
+
+
+</body>
+
+</html>

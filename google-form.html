@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถามเพลงสไตล์ที่ชอบ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .form-wrapper {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .section-title {
+            color: #495057;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .footer-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 form-wrapper">
+                
+                <h1 class="text-center text-primary mb-4 fw-bold">แบบสอบถามสไตล์เพลงที่ชอบ</h1>
+                
+                <form action="confirmed.html" method="post">
+                    
+                    <div class="section-title">ข้อมูลเพลงแต่ละสไตล์</div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">ชื่อเพลงที่ชอบ (In-game Name):</label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="platform" class="form-label">แพลตฟอร์มหลักที่ใช้ฟังเพลง (เช่น spotify,youtube music):</label>
+                        <input type="text" id="platform" name="platform" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="playtime" class="form-label">เวลาที่ใช้ฟังเพลง (ชั่วโมง):</label>
+                        <input type="text" id="playtime" name="playtime" class="form-control" required>
+                    </div>
+
+                    <div class="section-title">คุณกำลังฟังเพลงสไตล์ไหนอยู่บ้าง? (เลือกได้หลายอย่าง)</div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" name="game1" value="Honkai" id="game1">
+                        <label class="form-check-label" for="game1">Pop</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" name="game2" value="Minecraft" id="game2">
+                        <label class="form-check-label" for="game2">Hip Hop / Rap</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" name="game3" value="MLBB" id="game3">
+                        <label class="form-check-label" for="game3">EDM</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" name="game4" value="NIKKE" id="game4">
+                        <label class="form-check-label" for="game4">Jazz </label>
+                    </div>
+
+                    <div class="section-title">สไตล์เพลงที่ชื่นชอบมากที่สุด</div>
+                    <div class="d-flex flex-wrap gap-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fav_genre" value="TurnBased" id="turnbased">
+                            <label class="form-check-label" for="turnbased">Pop</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fav_genre" value="MOBA" id="moba">
+                            <label class="form-check-label" for="moba">Hip Hop / Rap</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fav_genre" value="FPS" id="fps">
+                            <label class="form-check-label" for="fps">EDM</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fav_genre" value="Sandbox" id="sandbox">
+                            <label class="form-check-label" for="sandbox">Jazz</label>
+                        </div>
+                    </div>
+
+                    <div class="section-title">ช่องทางหลักที่คุณใช้ในการฟังเพลง</div>
+                    <div class="mb-4">
+                        <label for="payment" class="form-label">กรุณาคลิกเพื่อเลือก เพียงอย่างเดียว :</label>
+                        <select name="payment" id="payment" class="form-select">
+                            <option value="Codashop">spotify</option>   

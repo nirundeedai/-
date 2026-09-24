@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My best friend</title>
+
+    <style>
+
+        /* พื้นหลังทั้งหมด */
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(
+                to bottom,
+                #dcecff,
+                #aebfd6
+            );
+
+            font-family: "Tahoma", "Arial", sans-serif;
+            color: #222;
+        }
+
+        /* หัวข้อ */
+        h1 {
+            text-align: center;
+            margin: 25px 0 15px 0;
+
+            color: green;
+            font-size: 40px;
+
+            text-shadow: 2px 2px 3px #777;
+        }
+
+        /* ตารางหลัก */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+
+            background-color: #f1f5fa;
+
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* หัวตาราง */
+        .header {
+            height: 58px;
+
+            background: linear-gradient(
+                to right,
+                #20d83d,
+                #5d8f80
+            );
+
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .header td {
+            padding: 10px;
+        }
+
+        /* ข้อมูลแต่ละคน */
+        .data {
+            height: 125px;
+            background-color: #f1f5fa;
+        }
+
+        .data td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* คอลัมน์ No */
+        .no {
+            width: 60px;
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* คอลัมน์รูป */
+        .picture {
+            width: 180px;
+        }
+
+        /* รูปเพื่อน */
+        .picture img {
+            width: 85px;
+            height: 85px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #b6ff00;
+
+            box-shadow: 0 5px 12px rgba(80, 120, 200, 0.35);
+        }
+
+        /* ช่องข้อมูล */
+        .name {
+            width: 230px;
+        }
+
+        .surname {
+            width: 320px;
+        }
+
+        .city {
+            width: 365px;
+        }
+
+        .hobby {
+            width: 280px;
+        }
+
+        /* เส้นแบ่งข้อมูล */
+        .data td {
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 45px;
+            padding: 10px 0;
+
+            border-top: 1px solid white;
+
+            font-size: 15px;
+            color: #222;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- หัวข้อ -->
+    <h1>My best friend</h1>
+
+
+    <!-- ตารางเพื่อน -->
+    <table>
+
+
+        <!-- ================= คนที่ 1 ================= -->
+
+        <tr class="header">
+            <td class="no">No</td>
+            <td class="picture">รูป</td>
+            <td class="name">วนิดา</td>
+            <td class="surname">แยมแสงสังข์</td>
+            <td class="city">กรุงเทพมหานคร</td>
+            <td class="hobby">ชอบนอน</td>
+        </tr>
+
+        <tr class="data">
+
+            <td class="no">1</td>
+
+            <td class="picture">
+                <img src="LINE_20260924_215425.jpg">
+            </td>
+
+            <td></td>
+
+            <td>แยมแสงสังข์</td>
+
+            <td>กรุงเทพมหานคร</td>
+
+            <td>ชอบนอน</td>
+
+        </tr>
+
+
+        <!-- ================= คนที่ 2 ================= -->
+
+        <tr class="header">
+
+            <td class="no">No</td>
+
+            <td class="picture">รูป</td>
+
+            <td class="name">จักรี</td>
+
+            <td class="surname">พรหมศิริกุล</td>
+
+            <td class="city">นนทบุรี</td>
+
+            <td class="hobby">ชอบแข่งขัน</td>
+
+        </tr>
+
+        <tr class="data">
+
+            <td class="no">2</td>
+
+            <td class="picture">
+                <img src="LINE_20260924_215529.jpg">
+            </td>
+
+            <td></td>
+
+            <td>พรหมศิริกุล</td>
+
+            <td>นนทบุรี</td>
+
+            <td>ชอบแข่งขัน</td>
+
+        </tr>
+
+
+        <!-- ================= คนที่ 3 ================= -->
+
+        <tr class="header">
+
+            <td class="no">No</td>
+
+            <td class="picture">รูป</td>
+
+            <td class="name">เอกกรินทร์</td>
+
+            <td class="surname">นิยมจันทร์</td>
+
+            <td class="city">นนทบุรี</td>
+
+            <td class="hobby">ชอบเล่นเกม</td>
+
+        </tr>
+
+        <tr class="data">
+
+            <td class="no">3</td>
+
+            <td class="picture">
+                <img src="LINE_20260924_215616.jpg">
+            </td>
+
+            <td></td>
+
+            <td>นิยมจันทร์</td>
+
+            <td>นนทบุรี</td>
+
+            <td>ชอบเล่นเกม</td>
+
+        </tr>
+
+
+        <!-- ================= คนที่ 4 ================= -->
+
+        <tr class="header">
+
+            <td class="no">No</td>
+
+            <td class="picture">รูป</td>
+
+            <td class="name">สมโชค</td>
+
+            <td class="surname">จิรวัฒนพิทักษ์</td>
+
+            <td class="city">นนทบุรี</td>
+
+            <td class="hobby">ชอบเล่นเกม</td>
+
+        </tr>
+
+        <tr class="data">
+
+            <td class="no">4</td>
+
+            <td class="picture">
+                <img src="LINE_20260924_215623.jpg">
+            </td>
+
+            <td></td>
+
+            <td>จิรวัฒนพิทักษ์</td>
+
+            <td>นนทบุรี</td>
+
+            <td>ชอบเล่นเกม</td>
+
+        </tr>
+
+
+        <!-- ================= คนที่ 5 ================= -->
+
+        <tr class="header">
+
+            <td class="no">No</td>
+
+            <td class="picture">รูป</td>
+
+            <td class="name">สุภาภรณ์</td>
+
+            <td class="surname">สุขประเสริฐ</td>
+
+            <td class="city">นนทบุรี</td>
+
+            <td class="hobby">ชอบK-pop</td>
+
+        </tr>
+
+        <tr class="data">
+
+            <td class="no">5</td>
+
+            <td class="picture">
+                <img src="LINE_20260924_215630.jpg">
+            </td>
+
+            <td></td>
+
+            <td>สุขประเสริฐ</td>
+
+            <td>นนทบุรี</td>
+
+            <td>ชอบK-pop</td>
+
+        </tr>
+
+
+    </table>
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+        นาย นิรันดร์ ดีได้ 056950405240-2
+        คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์
+        ม.ราชมงคลพระนคร
+
+    </div>
+
+
+</body>
+
+</html>

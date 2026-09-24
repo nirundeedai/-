@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>graph</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Tahoma", sans-serif;
+            background-color: #a9e4ef;
+            color: #222;
+        }
+
+        /* ส่วนหัว */
+        .hero {
+            background-color: #104582;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 15px auto 0;
+            max-width: 700px;
+        }
+
+        /* ส่วนของกราฟ */
+        .container {
+            width: 1024px;
+            max-width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+
+            display: flex;
+            gap: 24px;
+        }
+
+        /* กล่องกราฟ */
+        .chart-box {
+            background-color: #e3a6e2;
+            width: 50%;
+            height: 420px;
+            border-radius: 5px;
+            padding: 25px;
+        }
+
+        .chart-title {
+            color: #148f84;
+            font-size: 18px;
+            font-weight: bold;
+
+            padding-bottom: 10px;
+            border-bottom: 2px solid white;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           กราฟแนวนอน
+        ========================== */
+
+        .horizontal-chart {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .h-row {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .h-label {
+            width: 125px;
+            text-align: right;
+            padding-right: 10px;
+            font-size: 14px;
+        }
+
+        .h-bar-area {
+            flex: 1;
+        }
+
+        .h-bar {
+            height: 32px;
+            background-color: #a80cae;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding-right: 8px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .bar1 {
+            width: 100%;
+        }
+
+        .bar2 {
+            width: 77.77%;
+        }
+
+        .bar3 {
+            width: 62.23%;
+        }
+
+        .bar4 {
+            width: 55.56%;
+        }
+
+        .bar5 {
+            width: 37.77%;
+        }
+
+
+        /* =========================
+           กราฟแนวตั้ง
+        ========================== */
+
+        .vertical-chart {
+            height: 320px;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+
+            border-bottom: 2px solid white;
+            padding: 0 10px 0 10px;
+        }
+
+        .v-item {
+            height: 100%;
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .v-bar {
+            width: 45px;
+            background-color: #20bd99;
+
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            padding-top: 8px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .v1 {
+            height: 285px;
+        }
+
+        .v2 {
+            height: 222px;
+        }
+
+        .v3 {
+            height: 178px;
+        }
+
+        .v4 {
+            height: 160px;
+        }
+
+        .v5 {
+            height: 108px;
+        }
+
+        .v-label {
+            margin-top: 10px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        /* Footer */
+        footer {
+            width: 1024px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 20px 50px;
+
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .chart-box {
+                width: 100%;
+            }
+
+            footer {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- หัวข้อด้านบน -->
+    <section class="hero">
+
+        <h1>กีฬายอดนิยม</h1>
+
+        <p>
+            ผลสำรวจความคิดเห็นนักศึกษาจำนวน 150 คน เกี่ยวกับกีฬาที่ใช้บริการภายในมหาวิทยาลัยที่
+            ต้องการมากที่สุด
+        </p>
+
+    </section>
+
+
+    <!-- กราฟ -->
+    <div class="container">
+
+
+        <!-- กราฟแนวนอน -->
+        <div class="chart-box">
+
+            <div class="chart-title">
+                แนวนอน
+            </div>
+
+            <div class="horizontal-chart">
+
+                <div class="h-row">
+                    <div class="h-label">
+                        ฟุตบอล
+                    </div>
+
+                    <div class="h-bar-area">
+                        <div class="h-bar bar1">
+                            30%
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="h-row">
+                    <div class="h-label">
+                        บาสเกตบอล
+                    </div>
+
+                    <div class="h-bar-area">
+                        <div class="h-bar bar2">
+                            23.33%
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="h-row">
+                    <div class="h-label">
+                        แบดมินตัน
+                    </div>
+
+                    <div class="h-bar-area">
+                        <div class="h-bar bar3">
+                            18.67%
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="h-row">
+                    <div class="h-label">
+                        วอลเลย์บอล
+                    </div>
+
+                    <div class="h-bar-area">
+                        <div class="h-bar bar4">
+                            16.67%
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="h-row">
+                    <div class="h-label">
+                        ปิงปอง
+                    </div>
+
+                    <div class="h-bar-area">
+                        <div class="h-bar bar5">
+                            11.33%
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- กราฟแนวตั้ง -->
+        <div class="chart-box">
+
+            <div class="chart-title">
+                แนวตั้ง
+            </div>
+
+
+            <div class="vertical-chart">
+
+
+                <div class="v-item">
+
+                    <div class="v-bar v1">
+                        30%
+                    </div>
+
+                    <div class="v-label">
+                        ฟุตบอล
+                    </div>
+
+                </div>
+
+
+                <div class="v-item">
+
+                    <div class="v-bar v2">
+                        23.33%
+                    </div>
+
+                    <div class="v-label">
+                        บาสเกตบอล
+                    </div>
+
+                </div>
+
+
+                <div class="v-item">
+
+                    <div class="v-bar v3">
+                        18.67%
+                    </div>
+
+                    <div class="v-label">
+                        แบดมินตัน
+                    </div>
+
+                </div>
+
+
+                <div class="v-item">
+
+                    <div class="v-bar v4">
+                        16.67%
+                    </div>
+
+                    <div class="v-label">
+                        วอลเลย์บอล
+                    </div>
+
+                </div>
+
+
+                <div class="v-item">
+
+                    <div class="v-bar v5">
+                        11.33%
+                    </div>
+
+                    <div class="v-label">
+                        ปิงปอง
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ลิขสิทธิ์ -->
+    <footer>
+        © สงวนลิขสิทธิ์ 2569 โดย 056950405240-2 นาย นิรันดร์ ดีได้ CPE-RMUTP 2569
+    </footer>
+
+</body>
+</html>
